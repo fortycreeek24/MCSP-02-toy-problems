@@ -2,6 +2,26 @@
 
 //maxConsecutiveOnes([1,1,2,0,3,1,1,1,1,5,6,3]) returns 4
 
+//create two variables for count and max
+//loop through the array
+//check if elemenet is a 1
+//if yes increment the count var
+//if no restart the count var
+
+
+
 function maxConsecutiveOnes(array) {
-  //write solution code
+ const count = 0;
+ const max = 0;
+ for(i = 0; i < array.length; i++){
+      if(array[i]){
+       count ++;
+      } else {
+        if(count > last){
+          max = count;
+          count = 0;
+        }
+        return max;
+      }
+ }
 }
