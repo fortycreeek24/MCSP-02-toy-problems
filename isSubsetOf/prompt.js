@@ -20,7 +20,15 @@
 /*
  * Extra credit: Make the method work for arrays that contain objects and/or arrays as elements.
  */
-
 Array.prototype.isSubsetOf = function(arr) {
-  // your code here
-};
+  //iterate through the array that method being called on
+      for(let i = 0; i < this.length; i++) {
+          //for each element, if input arr does
+          if(!arr.includes(this[i])){
+              return false;
+              }
+          }
+          //return true at end if no falses returned
+          return true
+      };
+      

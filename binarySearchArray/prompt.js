@@ -10,4 +10,15 @@
  * console.log(index); // null
  */
 
-var binarySearch = function(array, target) {};
+var binarySearch = function(array, target) {
+    var result = [];
+    var storage = null;
+    var newNode = function(){
+        for(var i = 0; i < array.length; i++){
+         if(array.length === 1)
+            array.push(result[0]);
+           return result;
+        }
+      } 
+        return null;
+    };

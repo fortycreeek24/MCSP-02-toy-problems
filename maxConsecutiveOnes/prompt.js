@@ -11,17 +11,17 @@
 
 
 function maxConsecutiveOnes(array) {
- const count = 0;
- const max = 0;
- for(i = 0; i < array.length; i++){
-      if(array[i]){
-       count ++;
-      } else {
-        if(count > last){
-          max = count;
-          count = 0;
-        }
-        return max;
-      }
- }
-}
+  const count = 0;
+  const last = 0;
+  for(i = 0; i < array.length; i++){
+       if(array[i]){
+        count ++;
+       } else {
+         if(count > last){
+           last = count;
+           count = 0;
+         }
+       }  return Math.max(count, last);
+  }
+ } 
+  //console.log(maxConsecutiveOnes([1,1,2,0,3,1,1,1,1,5,6,3]))

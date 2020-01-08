@@ -46,6 +46,16 @@ var testingTransform = function(array) {
 };
 
 var insertionSort = function(array) {
-  // Your code goes here. Feel free to add helper functions if needed.
-  return array;
+  for(var i = 0; i < array.length; i++){
+    var store = array[i];
+    for(j = i -1; j >= 0 && array[j] > store; j--) {
+       array[j + 1] = array[j];
+   }
+
+      array[j + 1] = store;
+  }
+    return array;
 };
+
+var sort = insertionSort([3, 4, 6, 7, 1, 2, 5]);
+console.log(sort);

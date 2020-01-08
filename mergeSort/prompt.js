@@ -96,6 +96,38 @@
  */
 
 var mergeSort = function(array) {
-  // Your code here.
+  //create an if statement to check if the array length is < 2
+  //then reaturn array
+  if(array.length < 2) {
+      return array
+  }
+//create three new variables for the middle, the left, and the right
+
+var mid = Math.floor(array.length / 2);
+var subLeft = mergeSort(array.slice(0, mid));
+var subRight = mergeSort(array.slice(mid));
+  
+  //do a return statement with a new var merge setting it equal to the left and right
+  return mergeSort(subLeft, subRight);
+
 };
+
+//create a function with the new var with a node1 and node2
+function sortHelper(subLeft, subRight){
+  //create a results variable and set it as an empty array
+  var results = [];
+
+  //create a while statement with subLeft length and subRight length
+  while(subLeft.length > 0 && subRight.length > 0)
+      //if subLeft < subRight shift it and push it into results array
+      //else if subRight < subLeft push subRight into the results array
+      results.push(subLeft[0] < subRight[0]? subLeft[0].shift() : subRight[0].shift());
+             //return the results and concat
+            return results.concat(subLeft.length? subLeft : subRight); 
+           
+};
+
+var sort = mergeSort([100, 8, 15 ,79, 43, 9, 2, 5, 6, 4, 3, 7, 10, 112, 98]);
+
+console.log(sort);
 

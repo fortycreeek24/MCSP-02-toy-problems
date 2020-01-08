@@ -3,4 +3,6 @@
 // Example:
 // flatten([1,['a', 2, [8, true], 7]]) returns [1, 'a', 2, 8, true, 7]
 
-function flatten(array) {}
+function flatten(array) {
+    
+}
