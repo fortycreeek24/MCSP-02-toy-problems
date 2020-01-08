@@ -7,7 +7,7 @@
 //check if elemenet is a 1
 //if yes increment the count var
 //if no restart the count var
-
+ //dsaf
 
 
 function maxConsecutiveOnes(array) {
